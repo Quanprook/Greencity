@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GREEN CITY</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="/asset/style.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="nav">
+            <div class="nav__logo">
+                <i class="icon fa-solid fa-leaf"></i>
+                <span>GreenCITY</span>
+            </div>
+            <div class="nav__action">
+                <a class="action-btn" href="#register">
+                    register
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="banner">
+            <div class="container">
+                <div class="banner__left">
+                    <div class="banner__title">
+                        GREEN CITY
+                    </div>
+                    <div class="banner__description">
+                        Humans are the cause of the earth becoming polluted. We take the best of nature and give it back
+                        the pollution. Take care of the earth and she will take care of you.
+                    </div>
+                    <a class="banner__btn" href="#detail">
+                        explore
+                    </a>
+                </div>
+                <div class="banner__right">
+                    <i class="icon fa-solid fa-leaf"></i>
+                </div>
+            </div>
+        </div>
+        <div id="detail" class="detail">
+            <div class="detail__left">
+                <div class="title">
+                    POLLUTION
+                </div>
+            </div>
+            <div class="pollution__swiper swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <% if (pollutionData) { %>
+                        <% pollutionData.forEach(function(pollution){ %>
+                            <%- include('./layout/pollution', {pollution: pollution}); %>
+                                <% }); %>
+                                    <% } %>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div id="register" class="register">
+            <div class="form-field">
+                <div class="form__icon">
+                    <i class="icon fa-solid fa-leaf"></i>
+                </div>
+                <h2 class="form__title">Register</h2>
+                <span class="form__description">
+                    Register to get information!
+                </span>
+                <form class="form__green" method="POST" action="/register">
+                    <div class="form__input">
+                        <input id="register__email" name="email" type="email" placeholder="Email">
+                    </div>
+                    <div class="form__input">
+                        <input id="register__name" name="fullname" type="text" placeholder="Fullname">
+                    </div>
+                    <button id="register__btn" class="form__btn" type="submit">register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-item intro">
+            <i class="icon fa-solid fa-leaf"></i>
+            <span class="footer-item__intro">
+                Humans are the cause of the earth becoming polluted. We take the best of nature and give it back the
+                pollution. Take care of the earth and she will take care of you.
+            </span>
+        </div>
+        <div class="footer-item contact">
+            <div class="footer-item__title">
+                Contact
+            </div>
+            <ul class="footer-item__content">
+                <li>
+                    Email: <span>email@gmail.com</span>
+                </li>
+                <li>
+                    Phone: <span>0123456789</span>
+                </li>
+                <li>
+                    Address: <span>Binh Duong</span>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-item social">
+            <div class="footer-item__title">
+                follow us
+            </div>
+            <div class="footer-item__content">
+                <a class="footer-icon" href="">
+                    <i class="icon fa-brands fa-square-facebook"></i>
+                </a>
+                <a class="footer-icon" href="">
+                    <i class="icon fa-brands fa-square-instagram"></i>
+                </a>
+                <a class="footer-icon" href="">
+                    <i class="icon fa-brands fa-square-youtube"></i>
+                </a>
+                <a class="footer-icon" href="">
+                    <i class="icon fa-brands fa-square-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="back2top-btn">
+        <i class="icon fa-solid fa-arrow-up"></i>
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.js"
+    integrity="sha512-CX7sDOp7UTAq+i1FYIlf9Uo27x4os+kGeoT7rgwvY+4dmjqV0IuE/Bl5hVsjnQPQiTOhAX1O2r2j5bjsFBvv/A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.2/swiper-bundle.min.js"
+    integrity="sha512-dPYTaB+Ip4gAl9vo6U0jSmI8v1AZKjPKH367mfo7pR5gLf1IKpjm3bIXIwm+MmYWEf0eiBEWSBqE+MdKUx0jfg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        effect: "fade",
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+    });
+
+    $(function () {
+        $('.back2top-btn').on('click', function () {
+            $("html, body").animate({
+                scrollTop: 0
+            }, 0);
+        })
+
+        let prevScrollpos = window.pageYOffset;
+        $(window).on('scroll', function () {
+            const currentScrollPos = window.pageYOffset;
+
+            if (prevScrollpos > currentScrollPos) {
+                $('.back2top-btn').removeClass('show');
+            } else {
+                $('.back2top-btn').addClass('show');
+            }
+            if (window.pageYOffset === 0) {
+                $('.back2top-btn').removeClass('show');
+
+            }
+            prevScrollpos = currentScrollPos;
+        });
+    })
+
+    let data;
+
+    var fakeDataFunc = setInterval(() => {
+        document.querySelectorAll(".data-fake").forEach((element) => {
+            data = Math.floor(Math.random() * 101);
+            element.textContent = "Data: " + data;
+        })
+    }, 1000);
+
+</script>
+
+</html>

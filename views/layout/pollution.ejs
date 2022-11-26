@@ -1,0 +1,17 @@
+<div class="swiper-slide">
+    <div class="pollution__item">
+        <div class="pollution__title">
+            <%= pollution.type %>
+                <i class="icon fa-regular fa-lightbulb"></i>
+        </div>
+        <div class="pollution__description">
+            <%= pollution.description %>
+        </div>
+        <span class="data-fake">
+            Data:
+        </span>
+        <div class="pollution__background">
+            <img src="/image/<%= pollution.type %>.jpg" alt="">
+        </div>
+    </div>
+</div>
