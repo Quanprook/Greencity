@@ -1,0 +1,24 @@
+{
+    "pollution": [
+        {
+            "type": "air",
+            "description": "Air pollution is the contamination of air due to the presence of substances in the atmosphere that are harmful to the health of humans and other living beings, or cause damage to the climate or to materials. There are many different types of air pollutants, such as gases, particulates, and biological molecules."
+        },
+        {
+            "type": "land",
+            "description": "Soil contamination, soil pollution, or land pollution as a part of land degradation is caused by the presence of xenobiotic chemicals or other alteration in the natural soil environment. It is typically caused by industrial activity, agricultural chemicals or improper disposal of waste."
+        },
+        {
+            "type": "water",
+            "description": "Water pollution is the contamination of water bodies, usually as a result of human activities, so that it negatively affects its uses. Water bodies include lakes, rivers, oceans, aquifers, reservoirs and groundwater. Water pollution results when contaminants are introduced into these water bodies."
+        },
+        {
+            "type": "light",
+            "description": "Light pollution is the presence of unwanted, inappropriate, or excessive artificial lighting. In a descriptive sense, the term light pollution refers to the effects of any poorly implemented lighting, during the day or night."
+        },
+        {
+            "type": "noise",
+            "description": "Noise pollution can cause health problems for people and wildlife, both on land and in the sea. From traffic noise to rock concerts, loud or inescapable sounds can cause hearing loss, stress, and high blood pressure. Noise from ships and human activities in the ocean is harmful to whales and dolphins that depend on echolocation to survive."
+        }
+    ]
+}
